@@ -1,6 +1,9 @@
 # put your code here.
 def build_dict(fname):
 	"""Given a file, builds a dictionary of each word in the file."""
+
+	# import sys
+	# fname = sys.argv[-1]
 	
 	with open(fname) as file:
 
@@ -24,7 +27,7 @@ def build_dict(fname):
 
 
 
+import sys
+fname = sys.argv[-1]
 
-
-
-build_dict("twain.txt")
+build_dict(fname)
