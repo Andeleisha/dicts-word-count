@@ -1,9 +1,6 @@
 # put your code here.
 def build_dict(fname):
 	"""Given a file, builds a dictionary of each word in the file."""
-
-	# import sys
-	# fname = sys.argv[-1]
 	
 	with open(fname) as file:
 
@@ -11,7 +8,6 @@ def build_dict(fname):
 
 		for line in file:
 			line = line.rstrip()
-			# line = line.rstrip('"')
 			line =line.split(' ')
 			for word in line:
 				word = word.strip('"!.,?_;():')
@@ -31,3 +27,15 @@ import sys
 fname = sys.argv[-1]
 
 build_dict(fname)
+
+# def build_better_dict(fname):
+# 	"""Given a file builds a dictionary using counter collections."""
+
+# 	with open(fname) as file:
+# 		for line in file:
+# 			line = line.rstrip()
+# 			line =line.split(' ')
+# 			for word in line:
+# 				word = word.strip('"!.,?_;():')
+# 				word = word.lower()
+# 				
