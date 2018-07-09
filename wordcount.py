@@ -8,18 +8,23 @@ def build_dict(fname):
 
 		for line in file:
 			line = line.rstrip()
+			# line = line.rstrip('"')
 			line =line.split(' ')
 			for word in line:
+				word = word.strip('"!.,?_;():')
 				word = word.lower()
 				word_count_dict[word] = word_count_dict.get(word, 0) + 1
-		return word_count_dict
+		#return word_count_dict
 
-		#for k, v in word_count_dict:
-			#print(k, v)
+		for each in word_count_dict:
+			count = word_count_dict[each]
+			print(each, count)
+
+		return
 
 
 
 
 
 
-print(build_dict("test.txt"))
+build_dict("twain.txt")
